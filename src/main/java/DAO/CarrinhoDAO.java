@@ -93,4 +93,9 @@ public class CarrinhoDAO {
 
     }
     
+    public void testeCommit() {
+        
+        //testando o commit no Git com e-mail certo.     
+    }
+    
 }
