@@ -90,13 +90,7 @@ public class Componente {
     
     //Compatibilidade de componentes
     
-    public boolean compatibilidadePlacaMae (){
-        
-        
-        
-    
-    
-    }
+
 
     
     
