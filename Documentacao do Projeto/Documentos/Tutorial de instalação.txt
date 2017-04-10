@@ -1,0 +1,41 @@
+1 - Instalar Visual Studio 2013 ou superior;
+
+2 - Instalar o MySQL e a ferramenta de gerenciamento MySQL Workbench;
+
+3 - Criar o Schema "pcmaker" e rodar o script abaixo : 
+
+
+CREATE TABLE IF NOT EXISTS `pcmaker`.`usuario` (
+  `idusuario` INT(11) NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  `perfil` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(45) NOT NULL,
+  `rg` VARCHAR(45) NOT NULL,
+  `cep` VARCHAR(45) NOT NULL,
+  `rua` VARCHAR(45) NOT NULL,
+  `bairro` VARCHAR(45) NOT NULL,
+  `uf` VARCHAR(2) NOT NULL,
+  `numero` VARCHAR(45) NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `complemento` VARCHAR(300) NULL DEFAULT NULL,
+  PRIMARY KEY (`idusuario`),
+  UNIQUE INDEX `login_UNIQUE` (`login` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+  UNIQUE INDEX `perfil_UNIQUE` (`perfil` ASC),
+  UNIQUE INDEX `uf_UNIQUE` (`uf` ASC),
+  UNIQUE INDEX `cidade_UNIQUE` (`cidade` ASC))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8
+
+
+4 - Importar a pasta do projeto PCMAKER;
+
+5 - Conectar o database no Visual Studio através do Server Explorer;
+
+6 - Server Name : localhost; User : root ; Password : root;
+
+7 - Rodar o projeto e chamar a ação "http://localhost:52402/usuarios";
+
